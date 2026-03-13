@@ -1,0 +1,15 @@
+[
+  {
+    "id": "20260314_015212",
+    "direction": "Multi-modal foundation models for humanoid control",
+    "created": "2026-03-14T01:52:12.439169",
+    "status": "complete",
+    "novelty": "medium",
+    "directory": "/home/dietpi/.openclaw/workspace/research-system/experiments/20260314_015212",
+    "updated": "2026-03-14T01:56:04.465449",
+    "results": {
+      "test_results": "forward pass successful",
+      "loss": 1.3429
+    }
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "month": "2026-03",
+    "target": "one novel paper or article",
+    "status": "in_progress",
+    "created": "2026-03-14T01:52:12.438614",
+    "deadline": "2026-3-31",
+    "ideas": [
+      {
+        "direction": "Multi-modal foundation models for humanoid control",
+        "gap": "Most humanoid foundation models focus on vision, fewer on audio/tactile integration",
+        "idea": "Combine VLM with tactile and audio sensing for richer understanding",
+        "novelty": "medium",
+        "added": "2026-03-14T01:52:12.438763"
+      }
+    ],
+    "experiments": [
+      {
+        "id": "20260314_015212",
+        "added": "2026-03-14T01:52:12.439290",
+        "status": "running"
+      }
+    ],
+    "drafts": [],
+    "final_paper": null
+  }
+]

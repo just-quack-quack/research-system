@@ -1,0 +1,41 @@
+{
+  "date": "2026-03-14",
+  "papers_analyzed": 15,
+  "top_topics": [
+    "humanoid",
+    "grasping",
+    "simulation"
+  ],
+  "top_methods": [
+    "imitation learning",
+    "foundation model",
+    "teleoperation"
+  ],
+  "suggestions": [
+    {
+      "direction": "Multi-modal foundation models for humanoid control",
+      "gap": "Most humanoid foundation models focus on vision, fewer on audio/tactile integration",
+      "idea": "Combine VLM with tactile and audio sensing for richer understanding",
+      "novelty": "medium",
+      "added": "2026-03-14T01:52:12.438763"
+    },
+    {
+      "direction": "Adaptive sim-to-real for contact-rich tasks",
+      "gap": "Sim-to-real fails on high-frequency contact manipulation",
+      "idea": "Learn contact dynamics online and adapt policy in real-time",
+      "novelty": "high"
+    }
+  ],
+  "experiment_created": "/home/dietpi/.openclaw/workspace/research-system/experiments/20260314_015212",
+  "monthly_progress": {
+    "month": "2026-03",
+    "target": "one novel paper or article",
+    "status": "in_progress",
+    "deadline": "2026-3-31",
+    "days_remaining": 16,
+    "ideas_count": 1,
+    "experiments_count": 1,
+    "drafts_count": 0,
+    "complete": false
+  }
+}

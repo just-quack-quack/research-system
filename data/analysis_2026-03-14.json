@@ -1,0 +1,170 @@
+{
+  "date": "2026-03-14",
+  "count": 15,
+  "topics": [
+    [
+      "humanoid",
+      4
+    ],
+    [
+      "grasping",
+      2
+    ],
+    [
+      "simulation",
+      2
+    ],
+    [
+      "learning",
+      2
+    ],
+    [
+      "vision",
+      1
+    ]
+  ],
+  "methods": [
+    [
+      "imitation learning",
+      8
+    ],
+    [
+      "foundation model",
+      3
+    ],
+    [
+      "teleoperation",
+      2
+    ],
+    [
+      "model-predictive control",
+      1
+    ]
+  ],
+  "keywords": [
+    [
+      "robot",
+      31
+    ],
+    [
+      "learning",
+      15
+    ],
+    [
+      "manipulation",
+      15
+    ],
+    [
+      "control",
+      14
+    ],
+    [
+      "simulation",
+      14
+    ],
+    [
+      "policy",
+      10
+    ],
+    [
+      "humanoid",
+      10
+    ],
+    [
+      "vision",
+      6
+    ],
+    [
+      "localization",
+      5
+    ],
+    [
+      "tracking",
+      4
+    ]
+  ],
+  "papers": [
+    {
+      "id": "2603.12263v1",
+      "title": "$\u03a8_0$: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation",
+      "summary": "We introduce $\u03a8_0$ (Psi-Zero), an open foundation model to address challenging humanoid loco-manipulation tasks. While existing approaches often attempt to address this fundamental problem by co-training on large and diverse human and humanoid data, we argue that this strategy is suboptimal due to the fundamental kinematic and motion disparities between humans and humanoid robots. Therefore, data efficiency and model performance remain unsatisfactory despite the considerable data volume. To address this challenge, \\ours\\;decouples the learning process to maximize the utility of heterogeneous data sources. Specifically, we propose a staged training paradigm with different learning objectives: First, we autoregressively pre-train a VLM backbone on large-scale egocentric human videos to acquire generalizable visual-action representations. Then, we post-train a flow-based action expert on high-quality humanoid robot data to learn precise robot joint control. Our research further identifies a critical yet often overlooked data recipe: in contrast to approaches that scale with noisy Internet clips or heterogeneous cross-embodiment robot datasets, we demonstrate that pre-training on high-quality egocentric human manipulation data followed by post-training on domain-specific real-world humanoid trajectories yields superior performance. Extensive real-world experiments demonstrate that \\ours\\ achieves the best performance using only about 800 hours of human video data and 30 hours of real-world robot data, outperforming baselines pre-trained on more than 10$\\times$ as much data by over 40\\% in overall success rate across multiple tasks. We will open-source the entire ecosystem to the community, including a data processing and training pipeline, a humanoid foundation model, and a real-time action inference engine.",
+      "published": "2026-03-12",
+      "url": "https://arxiv.org/abs/2603.12263v1",
+      "authors": [
+        "Songlin Wei",
+        "Hongyi Jing",
+        "Boqian Li",
+        "Zhenyu Zhao",
+        "Jiageng Mao",
+        "Zhenhao Ni",
+        "Sicheng He",
+        "Jie Liu",
+        "Xiawei Liu",
+        "Kaidi Kang",
+        "Sheng Zang",
+        "Weiduo Yuan",
+        "Marco Pavone",
+        "Di Huang",
+        "Yue Wang"
+      ]
+    },
+    {
+      "id": "2603.12260v1",
+      "title": "HumDex:Humanoid Dexterous Manipulation Made Easy",
+      "summary": "This paper investigates humanoid whole-body dexterous manipulation, where the efficient collection of high-quality demonstration data remains a central bottleneck. Existing teleoperation systems often suffer from limited portability, occlusion, or insufficient precision, which hinders their applicability to complex whole-body tasks. To address these challenges, we introduce HumDex, a portable teleoperation system designed for humanoid whole-body dexterous manipulation. Our system leverages IMU-based motion tracking to address the portability-precision trade-off, enabling accurate full-body tracking while remaining easy to deploy. For dexterous hand control, we further introduce a learning-based retargeting method that generates smooth and natural hand motions without manual parameter tuning. Beyond teleoperation, HumDex enables efficient collection of human motion data. Building on this capability, we propose a two-stage imitation learning framework that first pre-trains on diverse human motion data to learn generalizable priors, and then fine-tunes on robot data to bridge the embodiment gap for precise execution. We demonstrate that this approach significantly improves generalization to new configurations, objects, and backgrounds with minimal data acquisition costs. The entire system is fully reproducible and open-sourced at https://github.com/physical-superintelligence-lab/HumDex.",
+      "published": "2026-03-12",
+      "url": "https://arxiv.org/abs/2603.12260v1",
+      "authors": [
+        "Liang Heng",
+        "Yihe Tang",
+        "Jiajun Xu",
+        "Henghui Bao",
+        "Di Huang",
+        "Yue Wang"
+      ]
+    },
+    {
+      "id": "2603.12243v1",
+      "title": "HandelBot: Real-World Piano Playing via Fast Adaptation of Dexterous Robot Policies",
+      "summary": "Mastering dexterous manipulation with multi-fingered hands has been a grand challenge in robotics for decades. Despite its potential, the difficulty of collecting high-quality data remains a primary bottleneck for high-precision tasks. While reinforcement learning and simulation-to-real-world transfer offer a promising alternative, the transferred policies often fail for tasks demanding millimeter-scale precision, such as bimanual piano playing. In this work, we introduce HandelBot, a framework that combines a simulation policy and rapid adaptation through a two-stage pipeline. Starting from a simulation-trained policy, we first apply a structured refinement stage to correct spatial alignments by adjusting lateral finger joints based on physical rollouts. Next, we use residual reinforcement learning to autonomously learn fine-grained corrective actions. Through extensive hardware experiments across five recognized songs, we demonstrate that HandelBot can successfully perform precise bimanual piano playing. Our system outperforms direct simulation deployment by a factor of 1.8x and requires only 30 minutes of physical interaction data.",
+      "published": "2026-03-12",
+      "url": "https://arxiv.org/abs/2603.12243v1",
+      "authors": [
+        "Amber Xie",
+        "Haozhi Qi",
+        "Dorsa Sadigh"
+      ]
+    },
+    {
+      "id": "2603.12193v1",
+      "title": "SaPaVe: Towards Active Perception and Manipulation in Vision-Language-Action Models for Robotics",
+      "summary": "Active perception and manipulation are crucial for robots to interact with complex scenes. Existing methods struggle to unify semantic-driven active perception with robust, viewpoint-invariant execution. We propose SaPaVe, an end-to-end framework that jointly learns these capabilities in a data-efficient manner. Our approach decouples camera and manipulation actions rather than placing them in a shared action space, and follows a bottom-up training strategy: we first train semantic camera control on a large-scale dataset, then jointly optimize both action types using hybrid data. To support this framework, we introduce ActiveViewPose-200K, a dataset of 200k image-language-camera movement pairs for semantic camera movement learning, and a 3D geometry-aware module that improves execution robustness under dynamic viewpoints. We also present ActiveManip-Bench, the first benchmark for evaluating active manipulation beyond fixed-view settings. Extensive experiments in both simulation and real-world environments show that SaPaVe outperforms recent vision-language-action models such as GR00T N1 and \\(\u03c0_0\\), achieving up to 31.25\\% higher success rates in real-world tasks. These results show that tightly coupled perception and execution, when trained with decoupled yet coordinated strategies, enable efficient and generalizable active manipulation. Project page: https://lmzpai.github.io/SaPaVe",
+      "published": "2026-03-12",
+      "url": "https://arxiv.org/abs/2603.12193v1",
+      "authors": [
+        "Mengzhen Liu",
+        "Enshen Zhou",
+        "Cheng Chi",
+        "Yi Han",
+        "Shanyu Rong",
+        "Liming Chen",
+        "Pengwei Wang",
+        "Zhongyuan Wang",
+        "Shanghang Zhang"
+      ]
+    },
+    {
+      "id": "2603.12185v1",
+      "title": "ComFree-Sim: A GPU-Parallelized Analytical Contact Physics Engine for Scalable Contact-Rich Robotics Simulation and Control",
+      "summary": "Physics simulation for contact-rich robotics is often bottlenecked by contact resolution: mainstream engines enforce non-penetration and Coulomb friction via complementarity constraints or constrained optimization, requiring per-step iterative solves whose cost grows superlinearly with contact density. We present ComFree-Sim, a GPU-parallelized analytical contact physics engine built on complementarity-free contact modeling. ComFree-Sim computes contact impulses in closed form via an impedance-style prediction--correction update in the dual cone of Coulomb friction. Contact computation decouples across contact pairs and becomes separable across cone facets, mapping naturally to GPU kernels and yielding near-linear runtime scaling with the number of contacts. We further extend the formulation to a unified 6D contact model capturing tangential, torsional, and rolling friction, and introduce a practical dual-cone impedance heuristic. ComFree-Sim is implemented in Warp and exposed through a MuJoCo-compatible interface as a drop-in backend alternative to MuJoCo Warp (MJWarp). Experiments benchmark penetration, friction behaviors, stability, and simulation runtime scaling against MJWarp, demonstrating near-linear scaling and 2--3 times higher throughput in dense contact scenes with comparable physical fidelity. We deploy ComFree-Sim in real-time MPC for in-hand dexterous manipulation on a real-world multi-fingered LEAP hand and in dynamics-aware motion retargeting, demonstrating that low-latency simulation yields higher closed-loop success rates and enables practical high-frequency control in contact-rich tasks.",
+      "published": "2026-03-12",
+      "url": "https://arxiv.org/abs/2603.12185v1",
+      "authors": [
+        "Chetan Borse",
+        "Zhixian Xie",
+        "Wei-Cheng Huang",
+        "Wanxin Jin"
+      ]
+    }
+  ]
+}
